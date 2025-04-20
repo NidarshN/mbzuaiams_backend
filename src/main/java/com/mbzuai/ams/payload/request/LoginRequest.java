@@ -1,7 +1,6 @@
 package com.mbzuai.ams.payload.request;
 
 import lombok.Data;
-
 import jakarta.validation.constraints.NotBlank;
 
 @Data

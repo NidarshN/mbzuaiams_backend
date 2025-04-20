@@ -130,7 +130,7 @@ public class SubmissionController {
     public ResponseEntity<SubmissionResponse> submitAssignment(
             @PathVariable Long assignmentId,
             @RequestParam("file") MultipartFile file) throws IOException {
-        
+        System.out.println("AssignmentSubmit" +  assignmentId );
         UserDetailsImpl userDetails = (UserDetailsImpl) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         User student = userRepository.findById(userDetails.id())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Student not found"));

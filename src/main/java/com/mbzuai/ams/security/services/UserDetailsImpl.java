@@ -1,6 +1,5 @@
 package com.mbzuai.ams.security.services;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mbzuai.ams.model.User;
 import org.springframework.security.core.GrantedAuthority;
@@ -67,13 +66,11 @@ public record UserDetailsImpl(Long id, String username, String email, String ful
 
     @Override
     public String getPassword() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPassword'");
+        return password;
     }
 
     @Override
     public String getUsername() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
+        return username;
     }
 }

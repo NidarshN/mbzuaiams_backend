@@ -33,6 +33,7 @@ public class AssignmentController {
 
     @GetMapping
     public ResponseEntity<List<AssignmentResponse>> getAllAssignments() {
+
         List<Assignment> assignments = assignmentRepository.findAllByOrderByDueDateDesc();
         List<AssignmentResponse> responses = assignments.stream()
                 .map(assignment -> new AssignmentResponse(

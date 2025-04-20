@@ -89,7 +89,7 @@ public class AuthController {
 
         Set<Role> roles = new HashSet<>();
         
-        if (signUpRequest.getRole().equals("teacher")) {
+        if (signUpRequest.getRole().toLowerCase().equals("teacher")) {
             roles.add(Role.ROLE_TEACHER);
         } else {
             roles.add(Role.ROLE_STUDENT);
